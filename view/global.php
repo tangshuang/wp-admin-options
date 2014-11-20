@@ -29,10 +29,13 @@
       )); ?> 用来作为用户中心。</p>
     </div>
     <div class="inside">
-      <p><label>Pad版式 &lt;= <input type="text" name="options[response_pad_width]" class="regular-text short-text" value="<?php echo $admin_options['response_pad_width']; ?>">px</label>，<label>Phone版式 &lt;= <input type="text" name="options[response_phone_width]" class="regular-text short-text" value="<?php echo $admin_options['response_phone_width']; ?>">px</label>。<br><small>设置好之后用pad或手机浏览你的网站检查效果。推荐为800和480。留空时不使用自适应屏幕功能。</small></p>
+      <p><label>Pad版式 ≤ <input type="text" name="options[response_pad_width]" class="regular-text short-text" value="<?php echo $admin_options['response_pad_width']; ?>">px</label>，<label>Phone版式 ≤ <input type="text" name="options[response_phone_width]" class="regular-text short-text" value="<?php echo $admin_options['response_phone_width']; ?>">px</label>。<br><small>设置好之后用pad或手机浏览你的网站检查效果。推荐为800和480。留空时不使用自适应屏幕功能。</small></p>
     </div>
     <div class="inside">
       <p><label>自动加载<input type="text" name="options[pagenavi]" class="regular-text short-text" value="<?php echo $admin_options['pagenavi']; ?>">页后停止自动加载，显示页数导航。<small>不是指第几页，而是打算往后加载几页。</small></label></p>
+    </div>
+    <div class="inside">
+      <p><label><input type="checkbox" name="options[img_lazyload]" value="1" <?php checked($admin_options['img_lazyload'],1); ?>> 主要区域（.post img）内的图片延时加载（不勾选的情况下图片正常显示）</label></p>
     </div>
   </div>
   <div class="postbox">

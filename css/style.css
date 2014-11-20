@@ -10,12 +10,13 @@ input.short-text {
 .inside textarea.code {
   font-size: .9em;
 }
-
-.metabox-holder > .postbox .inside {
+.inside {
   border-bottom: 1px solid #EEEEEE;
-  margin: 0;
-  padding: 8px 10px;
+  margin: 0 !important;
+  padding: 8px 10px !important;
 }
+
+
 .option-box form {
   margin: 0;
 }

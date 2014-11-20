@@ -34,6 +34,10 @@ jQuery(function($){
     }
   }
   window_setup();
+  // 显示和隐藏区域块
+  $('.metabox-holder .postbox .handlediv').click(function(){
+    $(this).parent().toggleClass('closed');
+  });
   // 调整位置的按钮▲▼
   $('.admin-options-list').on('click','.box .btns a.up',function(e){
     var $box = $(this).parent().parent(),$prevBox = $box.prev('.box');

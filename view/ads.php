@@ -15,7 +15,7 @@
     $_SESSION['poser'][$ctrl_id] = 0;
     if(!empty($ads))$ads = array_values($ads);
     // 把一些固定要填写的值放在这里
-    $permas = array('边栏悬浮');
+    $permas = array('列表中第三篇文章后的广告720x60','文章页靠近相关文章的广告300x250');
     foreach($permas as $i => $perma) {
       ?>
       <div class="inside">

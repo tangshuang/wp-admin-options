@@ -22,7 +22,7 @@ class AdminOptionsAds {
   function print_ad_code() {
     if(!empty($this->ads)) foreach($this->ads as $name => $code) {
       echo '<div id="admin-options-ad-'.$name.'-pend" style="display:none;">'.$code.'</div>';
-      echo '<script>if(jQuery(window).width() > _options_.response_phone_width)jQuery("#admin-options-ad-'.$name.'").html(jQuery("#admin-options-ad-'.$name.'-pend").html())</script>'."\n";
+      echo '<script>jQuery("#admin-options-ad-'.$name.'").html(jQuery("#admin-options-ad-'.$name.'-pend").html())</script>'."\n";
     }
   }
 }

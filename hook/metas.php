@@ -6,6 +6,7 @@ class AdminOptionsPostMetas {
   function __construct() {
     add_action('add_meta_boxes',array(&$this,'add_post_metas_box'));
     add_action('save_post',array(&$this,'save_post_metas'));
+    add_shortcode('postmeta',array(&$this,'add_meta_shortcode_in_post'));
   }
 
   function add_post_metas_box() {
@@ -140,6 +141,16 @@ class AdminOptionsPostMetas {
     if(!empty($post_metas))foreach($post_metas as $name => $value) {
       update_post_meta($post_id,'_post_metas_'.$name,$value) or add_post_meta($post_id,'_post_metas_'.$name,$value,true);
     }
+  }
+
+  // 在文章中使用[postmeta key="属性"]调用属性值
+  function add_meta_shortcode_in_post($atts){
+    extract(shortcode_atts(array(
+      'key' => ''
+    ),$atts));
+    global $post;
+    $value = get_post_meta($post->ID,'_post_metas_'.$key,true);
+    return $value;
   }
 
 } // end of class
